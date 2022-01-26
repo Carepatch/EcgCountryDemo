@@ -112,17 +112,17 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void receiveAlgorithmResult(AlgorithmResult result) {
                     super.receiveAlgorithmResult(result);
-                    Logger.w("result==%s", result.toString());
+//                    Logger.w("result==%s", result.toString());
                     List<Integer> rPeaks = result.getrPeaks();
                     List<Long> rTime = result.getrTime();
                     List<Double> rrsList = result.getrRs();
                     List<Integer> rHrs = result.getrHr();
                     Logger.w("AlgorithmResult start----");
-                    Logger.d(rPeaks);
-                    Logger.d(rTime);
                     Logger.d(rrsList);
+                    Logger.d(rTime);
                     Logger.d(rHrs);
-                    Logger.w("AlgorithmResult end----");
+                    Logger.d(rPeaks);
+                    Logger.w("AlgorithmResult end----rTime size==%s,rHrs size:%s,rPeaks size:%s", rTime.size(), rHrs.size(),rPeaks.size());
                 }
             });
         }
